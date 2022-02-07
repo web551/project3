@@ -1,0 +1,16 @@
+.title {
+  @include font-orchidea;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: $main-color;
+  span {
+    @include font-orchidea-italic;
+    text-transform: lowercase;
+  }
+}
+
+.subtitle {
+  @include font-orchidea;
+  font-size: 48px;
+  color: $main-color;
+}

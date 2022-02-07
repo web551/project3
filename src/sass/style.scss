@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Roboto&display=swap");
+/* ----------- base ---------- */
+@import "base/mixins";
+@import "base/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  background-color: $second-color;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----------- blocks ---------- */
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/titles";
+@import "blocks/footer";
+@import "blocks/tabs";
+@import "blocks/accordion";
+@import "blocks/slider";
+@import "blocks/new-page";
+
+/* ----------- libs ---------- */
+@import "libs/fonts";

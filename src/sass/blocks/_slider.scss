@@ -1,0 +1,245 @@
+.slider {
+  padding: 70px 0 210px 0;
+  .title {
+    text-align: center;
+  }
+
+  // .swiper-wrapper {
+  //   transition-property: none !important;
+  //   transition: none !important;
+  // }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin: 70px auto 0 auto;
+  }
+
+  .swiper-slide {
+    width: auto;
+    // position: relative;
+    height: 550px;
+    cursor: pointer;
+    // position: relative;
+    // &:before {
+    //   position: absolute;
+    //   content: "";
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   right: 0;
+    //   z-index: 0;
+    //   background-image: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0.05) 100%);
+    //   transform: matrix(-1, 0, 0, 1, 0, 0);
+    // }
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider__card-text__4 {
+    position: absolute;
+    bottom: 0;
+    font-size: 24px;
+    line-height: 110%;
+    width: 100%;
+    padding: 35px 30px;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    color: $second-color;
+    @include font-orchidea;
+  }
+  .slider__card-text__5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    line-height: 110%;
+    width: 46%;
+    height: 100%;
+    text-align: center;
+    padding: 53px 0 0 19px;
+    background-color: $main-color;
+    color: $second-color;
+    @include font-orchidea;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-size: 20px 20px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 117%;
+  }
+
+  .swiper-button-prev {
+    left: 44%;
+  }
+  .swiper-button-next {
+    right: 44%;
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    &:before {
+      content: none;
+    }
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .swiper-button-prev {
+    background-image: url("../icons/arrow_left.svg");
+  }
+  .swiper-button-next {
+    background-image: url("../icons/arrow_right.svg");
+  }
+}
+
+// /////////////////
+// .popup {
+//   display: flex;
+//   position: fixed;
+//   z-index: 2;
+//   left: 0;
+//   top: 0;
+//   height: 100vh;
+//   width: 100vw;
+//   background: #141414;
+// }
+
+// .overlay {
+//   display: none;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 9;
+//   background-color: rgba(0, 0, 0, 0.7);
+//   opacity: 1;
+// }
+
+/* ----------- media запросы ---------- */
+
+@media (max-width: 700px) {
+  .slider {
+    padding: 7px 0 80px 0;
+    .slider__card-text__4 {
+      font-size: 15px;
+      padding: 25px 25px;
+    }
+    .slider__card-text__5 {
+      font-size: 21px;
+      padding-right: 10px;
+    }
+    .title {
+      font-size: 36px;
+      text-align: inherit;
+    }
+  }
+  .swiper .swiper-slide {
+    width: 260px;
+    height: 400px;
+  }
+  .swiper .swiper-slide {
+    opacity: 1;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/*-------------------------------------*/
+
+.big-img {
+  display: none;
+}
+.big-img.show {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: none;
+  overflow: hidden;
+  display: block;
+}
+
+.big-img__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: relative;
+  background: rgb(0, 0, 0);
+}
+.big-img__content img {
+  width: 1300px;
+  height: 789px;
+  object-fit: cover;
+}
+.big-img__text {
+  max-width: 1300px;
+  margin-top: 25px;
+  p {
+    margin-top: 10px;
+  }
+}
+.close {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2%;
+  right: 1%;
+  z-index: 1001;
+  cursor: pointer;
+  background-image: url("../icons/close.svg");
+  background-repeat: no-repeat;
+}
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 70px;
+  z-index: 1002;
+  bottom: 14%;
+  cursor: pointer;
+  background-color: $main-color;
+  svg {
+    pointer-events: none;
+  }
+}
+
+// .specialClass {
+//   color: white
+// }
+.arrow-left {
+  right: 19%;
+}
+.arrow-right {
+  right: 16%;
+}
+.big-img__text {
+  color: white;
+}

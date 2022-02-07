@@ -1,0 +1,91 @@
+.accordion {
+  padding: 93px 0 100px 0;
+  min-height: 780px;
+  .swiper {
+    margin-top: 15px !important;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 106% !important;
+  }
+}
+.accordion .accordion__body {
+  color: rgba(0, 0, 0, 0);
+  display: none;
+  overflow: hidden;
+}
+
+.accordion__container {
+  max-width: 1140px;
+}
+
+.accordion label {
+  cursor: pointer;
+  display: block;
+  width: 74%;
+  border-bottom: 2px solid #000000;
+  padding: 23px 0 23px 0;
+  color: #bfe2ff;
+  font-weight: 300;
+  box-sizing: border-box;
+  z-index: 100;
+  font-size: 18px;
+  margin: 0 auto;
+  transition: color 0.35s;
+  @include font-orchidea;
+  font-size: 48px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: $main-color;
+}
+.accordion input {
+  display: none;
+}
+.accordion label:before {
+  content: url("../icons/arrow_right.svg");
+  float: right;
+}
+// .accordion input:checked + label {
+//   background-color: #285f8f;
+//   color: #fff;
+//   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.4), 0 28px 30px rgba(0, 0, 0, 0.3);
+// }
+.accordion input:checked + label:before {
+  transition: transform 0.35s;
+  transform: rotate(90deg);
+}
+.accordion input:not(:checked) + label:before {
+  transition: transform 0.35s;
+}
+.accordion input:checked + label + .accordion__body {
+  display: block;
+  height: auto;
+  color: rgb(2, 1, 1);
+}
+
+/* ----------- media запросы ---------- */
+
+@media (max-width: 1500px) {
+  .accordion label {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .accordion {
+    min-height: 552px;
+    padding-top: 8px;
+    padding-bottom: 70px;
+  }
+  .accordion label {
+    padding: 20px 0 20px 0;
+    width: 88%;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .accordion .accordion label {
+    font-size: 36px;
+  }
+}

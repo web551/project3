@@ -1,0 +1,11 @@
+.footer {
+  padding: 150px 0 18px 0;
+  background-color: $main-color;
+  &__label {
+    text-align: center;
+    color: $second-color;
+    font-family: "Roboto";
+    font-weight: normal;
+    font-size: 14px;
+  }
+}

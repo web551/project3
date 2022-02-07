@@ -1,0 +1,64 @@
+.new-page {
+  padding: 100px 0 231px 0;
+  &__block {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__item-left {
+    margin-right: 0;
+    margin-left: 128px;
+  }
+  &__item-right {
+    margin-right: 0;
+    margin-left: 261px;
+  }
+  &__image-right {
+    margin-right: 0;
+    margin-left: 128px;
+  }
+}
+
+/* ----------- media запросы ---------- */
+
+@media (max-width: 1661px) {
+  .new-page {
+    &__block {
+      justify-content: space-between;
+    }
+    &__item-left {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (max-width: 1479px) {
+  .new-page {
+    &__block {
+      justify-content: center;
+    }
+    &__item-left {
+      margin-left: 0;
+      margin-top: 50px;
+      max-width: 870px;
+    }
+    &__item-right {
+      margin-left: 0;
+      max-width: 870px;
+    }
+    &__image-right {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .new-page {
+    padding: 0;
+    &__item-right {
+      order: 1;
+    }
+    &__image-right {
+      order: inherit;
+    }
+  }
+}
